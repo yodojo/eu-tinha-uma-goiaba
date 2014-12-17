@@ -2,54 +2,34 @@ var Decisor = require('../../src/index');
 
 describe("Carinha da Goiaba:", function() {
   var decisor = new Decisor();
-
+  
   it("Se não tem grana, nao compra a goiaba", function() {
+    var dado = new Decisor(0.50, false); 
 
-    decisor.dinheiroNaCarteira = 0.50;
-
-    var resultado = decisor.decide();
-    expect(resultado.comprarGoiaba).toBe(false);
+    expect(dado.decide()).toBe('');
   });
 
   it("Tem fome e tem grana, compra a goiaba", function() {
+    var dado = new Decisor(2, true); 
 
-    decisor.dinheiroNaCarteira = 2.00;
-    decisor.estarFaminto = true;
-
-
-    var resultado = decisor.decide();
-
-    expect(resultado.comprarGoiaba).toBe(true);
+    expect(dado.decide()).toBe('comprar goiaba');
   });
 
   it("Não tem fome e tem grana, não compra a goiaba e pega o onibus", function() {
+    var dado = new Decisor(2, false); 
 
-    decisor.dinheiroNaCarteira = 2.00;
-    decisor.estarFaminto = false;
-
-    var resultado = decisor.decide();
-
-    expect(resultado.comprarGoiaba).not.toBe(true);
-    expect(resultado.comprarPassagem).toBe(true);
+    expect(dado.decide()).toBe('comprar passagem');
   });
 
   it("Tem fome e não tem grana, não compra a goiaba", function() {
+    var dado = new Decisor(0.5, true); 
 
-    decisor.dinheiroNaCarteira = 0.50;
-    decisor.estarFaminto = true;
-
-    var resultado = decisor.decide();
-    expect(resultado.comprarGoiaba).toBe(false);
+    expect(dado.decide()).toBe('');
   });
 
   it("Compra a goiaba e pega onibus", function() {
-
-    decisor.dinheiroNaCarteira = 10;
-    decisor.estarFaminto = true;
-
-    var resultado = decisor.decide();
-    expect(resultado.comprarGoiaba).toBe(true);
-    expect(resultado.comprarPassagem).toBe(true);
+    var dado = new Decisor(10, true); 
+    
+    expect(dado.decide()).toBe('comprar goiaba e comprar passagem');
   });
-
 });
