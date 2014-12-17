@@ -1,4 +1,5 @@
 # eu-tinha-uma-goiaba
+[![Travis-CI](https://api.travis-ci.org/gpedro/eu-tinha-uma-goiaba.svg?branch=master)](https://travis-ci.org/gpedro/eu-tinha-uma-goiaba)
 
 # Local
   - MeoApp Old QG
