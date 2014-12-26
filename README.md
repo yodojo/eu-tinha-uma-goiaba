@@ -1,13 +1,13 @@
 # eu-tinha-uma-goiaba
 [![Travis-CI](https://api.travis-ci.org/yodojo/eu-tinha-uma-goiaba.svg?branch=master)](https://travis-ci.org/yodojo/eu-tinha-uma-goiaba)
 
-# Local
+### Local
   - MeoApp Old QG
 
-# Problema
+### Problema
 [Sabe se o cara ia pegar o onibus ou ia comprar uma goiaba](http://youpix.virgula.uol.com.br/memepedia/onibus-ou-goiaba-uma-historia-que-virou-meme/)
 
-# Participantes
+### Participantes
   - Alvaro
   - Gabriel Pedro
   - Gabriel Araujo
@@ -22,7 +22,8 @@
   - Dado
   - Murillo 
 
-# Pró
+#Retrospectiva
+### Prós
   - doritos
   - cerveja
   - ~10 pessoas vieram
@@ -31,7 +32,7 @@
   - dojo.js tava legal
   - galera bebada (testes passando com sucesso)
   
-# Contras
+### Contras
   - vazaram cedo
   - mapa errado
   - conversa paralela enquanto codava
